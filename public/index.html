@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"></head>
+    <title>ねこがちゃ！</title>
+
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="ねこがちゃ！" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nya-nn.web.app" />
+    <meta property="og:image" content="https://nya-nn.web.app/image/image.jpg" />
+    <meta property="og:site_name" content="ねこがちゃ！" />
+    <meta property="og:description" content="[完全無料]ねこちゃんの画像を集めるガチャです。みなさんに癒しを与えます。[全28種]" />
+
+
+
+    <link rel="icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/nyan.css">
+    <link rel="stylesheet" type="text/css" href="style/menu.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+
+    <script src= "js/nyan.js"></script>
+    <style>
+      * { font-family: "M PLUS Rounded 1c"; }
+    </style>
+  </head>
+
+        
+        
+
+
+
+    <body oncontextmenu="return false;" onmousedown="return false;">
+        <div id="container">
+            <header>
+                <div class="header-logo-menu">
+                  <div id="nav-drawer">
+                      <div id="nav-content">
+                        <ul class="sidenav">
+                          <li><a href="index.html"class="active">Top</a></li>
+                        </ul>
+        
+                      </div>
+                  </div>
+                  <div class="logo-area">
+                      <a href = "index.html" style="color :#ffffff; text-decoration: none;">ねこがちゃ！  v1.00</a>
+                    </a>
+                  </div>
+                </div>
+              </header>
+            
+          
+    
+          <div class = "ContentsFrame">
+            <div class="MainContents">
+                <div class ="catimage" id ="catimage" style ="margin-top: 80px;">
+
+                </div>
+                <div id="catname">
+                    <h3><span id="name"> </span></h3>
+                </div>
+
+                
+        
+                <input type="button" class="gacha btn" style="font-size: 24px; color:#ffffff;"value="ガチャ！" onclick="getResult();">
+
+                <div class="twitter btn tweet" id="tweetbtn">
+                    <h4>Tweet</h4>
+                        <a class="link" href="https://twitter.com/share?url=https://nya-nn.web.app&related=Mi_kyuu&hashtags=ねこがちゃ,にゃーん&text=ねこがちゃ！" 
+                                rel="nofollow" target="_blank">
+                        </a>
+                    </div>
+                <h6 id = "counter">にゃーん!</h6>
+                
+                <h2>Result</h2>
+                <h3 id="status">コンプ率 : 0%</h3>
+                <div class="resultView scrollarea">
+                    
+                    <table class="result" border="1" align="center" width = "600px" style="font-size: large; padding-bottom: 100px;">
+                        <tr align="center">
+                            <th rowspan="4" width = "100px"  height="100px">N(88%):</th>
+                            <td id="R1" width = "100px"  height="100px">001</td>
+                            <td id="R2" width = "100px"  height="100px">002</td>
+                            <td id="R3" width = "100px"  height="100px">003</td>
+                            <td id="R4" width = "100px"  height="100px">004</td>
+                            <td id="R5" width = "100px"  height="100px">005</td>
+                        </tr>
+                        <tr align="center">
+                            <td id="R6" width = "100px"  height="100px">006</td>
+                            <td id="R7">007</td>
+                            <td id="R8">008</td>
+                            <td id="R9">009</td>
+                            <td id="R10">010</td>
+                        </tr>
+                        <tr align="center">
+                            <td id="R11" width = "100px"  height="100px">011</td>
+                            <td id="R12">012</td>
+                            <td id="R13">013</td>
+                            <td id="R14">014</td>
+                            <td id="R15">015</td>
+                        </tr>
+                        <tr align="center">
+                            <td id="R16" width = "100px"  height="100px">016</td>
+                            <td id="R17">017</td>
+                            <td id="R18">018</td>
+                            <td id="R19">019</td>
+                            <td id="R20">020</td>
+                        </tr>
+                        <tr align="center">
+                        <th>R(10%):</th>
+                            <td id="R21" width = "100px"  height="100px">021</td>
+                            <td id="R22">022</td>
+                            <td id="R23">023</td>
+                            <td id="R24">024</td>
+                            <td id="R25">025</td>
+                        </tr>
+                        <tr align="center">
+                        <th>UR(2%):</th>
+                            <td id="R26" width = "100px"  height="100px">026</td>
+                            <td id="R27">027</td>
+                            <td id="R28">028</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+            </div>      
+          
+
+          <footer>
+            <p>このガチャは完全無料で遊ぶことができます。</p>
+            <p>使用しているねこちゃんの画像は
+                <a href="https://www.pexels.com" target="_blank" style="color: #00ff00;">pexels.com</a>
+                様よりお借りしました。
+                このサイトは画像を再配布するものではありません。</p>
+            <ul class="footer-menu">
+            </ul>
+            <p>2019-2020　<a href="https://mi-kyuu.web.app" target="_blank" style="color: #00ff00;">Mi_kyuu</a>.</p>
+          </footer>
+          
+        </body>
+    </div>
+    
+</html>
+

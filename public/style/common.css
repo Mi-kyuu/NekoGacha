@@ -1,0 +1,123 @@
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body::before {
+    background: url(../image/bg.jpg) no-repeat center;/* 画像（ここにfixedは入れない） */
+    background-size: cover;/* cover指定できる */
+    content: "";
+    display: block;
+    position: fixed;/* 擬似要素ごと固定 */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;/* 横幅いっぱい */
+    height: 100vh;/* 縦幅いっぱい */
+  }
+
+  h1 {
+    border-bottom: dotted 2px #cccccc;
+  }
+
+  h2 {
+    border-bottom: dotted 1px #cccccc;
+  }
+
+  #container {
+    position: relative;
+    min-height: 100vh;
+    
+  }
+ 
+ .ContentsFrame {
+    margin: auto;
+    background: rgba(0,0,0,0.7);
+    max-width: 900px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+  }
+  .MainContents {
+    animation: fadeIn 1.5s ease 0.1s 1 normal;
+    padding: 10px;
+    max-width: 100%;
+    color : #cccccc;
+  }
+
+  .pf {
+    animation: fadeIn 1.5s ease 0.0s 1 normal;
+    max-width: 90%; 
+    margin-top: 80px;
+  }
+
+  .img {
+    animation: fadeIn 1.5s ease 0.0s 1 normal;
+    margin: 20px;
+    width: 80%;
+    max-width: 560px;
+  }
+
+
+
+  .btn {
+    display: inline-block;
+    padding: 0.8em 1.6em;
+    text-decoration: none;
+    color: #eeeeee;
+    background: linear-gradient(180deg, #4d638c, #283654); 
+    border: solid 2px #283654;
+    border-radius: 3px;
+    transition: .4s;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(180deg, #b7c9f0, #4d638c); 
+    color: white;
+    text-decoration: none;
+  }
+
+  header {
+    padding:20px;
+    background: linear-gradient(180deg, #4d638c, #283654); 
+    width: 100%;
+    height: 64px;
+    color: #eeeeee;
+    font-size: 28px;
+    padding: 12px;
+    border: none;
+    position: fixed;
+    opacity: 1;
+    z-index:2;
+    
+    /*box-shadow: 2px 2px 4px #1c1e24;*/
+  }
+
+
+
+  footer{
+    width: 100%;
+    background: rgba(40, 54, 84, 1);
+    color: white;
+    font-size: 100%;
+    border: none;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    z-index:1;
+}
+
+  ul.footer-menu li {
+    display: inline;
+  }
